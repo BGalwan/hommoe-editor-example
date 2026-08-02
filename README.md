@@ -1,53 +1,81 @@
-# hommoe-editor-examples
+# 🏰 HOMM Olden Era Editor Examples
 
-**Welcome!** This repository serves as a collection of simple sample maps to demonstrate the capabilities of the **Heroes of Might and Magic: Olden Era** (HOMM Olden Era) Map & Campaign Editor.
+Welcome! This repository serves as a curated collection of focused sample maps designed to demonstrate the features and mechanics of the **Heroes of Might and Magic: Olden Era** Map & Campaign Editor.
 
 ---
 
 ## 📋 Table of Contents
 - [Overview](#-overview)
-- [Maps](#-map-structure)
+- [Example List](#-example-list)
+- [Example Structure](#-example-structure)
+- [Installation & Usage](#-installation--usage)
+- [Contributing](#-contributing)
 
 ---
 
 ## 🔍 Overview
 
-Instead of hunting through  full-length maps, this repository provides **focused, isolated examples** for some key feature. Each map is engineered to demonstrate **one or a few mechanic** cleanly.
+Instead of hunting through full-length maps, this repository provides **focused, isolated examples** for key editor features. Each map is engineered to cleanly demonstrate **one or two specific mechanics**.
 
 ---
 
-## 📂 Example list
+## 📂 Example List
+
+| Map / Feature | Description | Key Mechanics |
+| :--- | :--- | :--- |
+| **`EventOnDayOne`** | Displays a dialog with an avatar and triggers localization mechanisms when starting the map. | Hidden quest, Day 1 auto-trigger event, Dialogs, Localization. |
+| **`MarkSubQuestDone`** | Tracks troop encounters (killing or making them flee) and triggers a dialog before marking a subquest as completed. | Counter tracking, Encounter events, Subquest completion, Dialog boxes. |
 
 ---
-EventOnDayOne : demonstrate a hidden quest with an event that will shoot when starting the map : here the event display a dialog with avatar and localization mechanism
 
-MarkSubQuestDone : demonstrate the termination of a subquest after a given event has occured. Here killing or making flee a troglodyte troup increase a dedicated encouter, a quest and a dedicated subquest look for the counter and launch a dialog box with avatar when done. A second action is launched in order to mark the subquest as done.   
+## 🏗️ Example Structure
+
+Each example project consists of three main components:
+
+1. **JSON File:** Contains counter triggers, interruptions, and logic setups (typically edited with the [Map Editor JSON Tool](https://github.com/mimiasei/map-editor-json-tool)).
+2. **Map File (`.map`):** A lightweight map (typically 16×16) containing only the essential elements required for the demonstration.
+3. **ZIP Archive (`.zip`):** Mirrors the file structure of `Core.zip` and contains the dialog assets and localization tokens.
 
 ---
-## 📂 Example structure
-Each example is composed of
-- a json file usually edited with https://github.com/mimiasei/map-editor-json-tool that contains mainly the counter, interruption and 
-- a map file (the simpler as possible 16*16) with necessary elements for the example
-- the zip file with the same strcuture than Core.zip and containing Dialogs and localisation token
 
-To make it works, copy : 
-- Json file + map file in <your install path>\Heroes of Might and Magic Olden Era\HeroesOldenEra_Data\StreamingAssets\maps
-- Zip file in the same folder than Core.zip i.e. <your install path>\Heroes of Might and Magic Olden Era\HeroesOldenEra_Data\StreamingAssets 
+## 🚀 Installation & Usage
 
+To run these examples in your local game editor:
 
-## Contributing
-This project is open source and contributions are welcome.
+1. **Copy the JSON and Map files** to your game's map folder:
+   ```text
+   <your install path>\Heroes of Might and Magic Olden Era\HeroesOldenEra_Data\StreamingAssets\maps
+   ```
 
-- Open an issue first. Before writing any code, create a GitHub issue describing the feature or bug. This keeps work visible, avoids duplicate effort, and lets maintainers give feedback before you invest time in an implementation.
+2. **Copy the ZIP archive** into the same folder as `Core.zip`:
+   ```text
+   <your install path>\Heroes of Might and Magic Olden Era\HeroesOldenEra_Data\StreamingAssets
+   ```
 
-- Fork the repository and create a feature branch off main: git checkout -b feature/my-feature
-Commit your changes with a clear message
+3. Open the game or map editor to load and test the example.
 
-- Push the branch: git push origin feature/my-feature
+---
 
-- Open a pull request that references the issue (e.g. Closes #42 in the PR description)
-Please keep PRs focused — one feature or fix per PR makes review faster. PRs without a corresponding issue may be closed or asked to create one first.
+## 🤝 Contributing
 
-Good first contributions
+Contributions are welcome! This is an open-source community effort to build a comprehensive catalog of map-editing techniques.
 
-- add other simple scenario or examples to enrich the catalog
+### How to Contribute
+
+1. **Open an Issue First:** Before writing code or creating maps, open a GitHub Issue describing your proposed feature or fix. This avoids duplicate effort and allows maintainers to provide early feedback.
+2. **Fork & Branch:**
+   ```bash
+   git checkout -b feature/my-new-example
+   ```
+3. **Commit Your Changes:** Keep commit messages clear and concise.
+4. **Push & Open a PR:**
+   ```bash
+   git push origin feature/my-new-example
+   ```
+   Open a pull request referencing your issue (e.g., `Closes #42`).
+
+> **Note:** Please keep Pull Requests focused on a single feature or example. PRs without a corresponding issue may be closed or placed on hold.
+
+### 💡 Good First Contributions
+- Adding simple, single-mechanic scenarios or map templates to enrich the catalog.
+- Improving documentation, comments, or localization token coverage.
