@@ -1,0 +1,73 @@
+{
+	"counters": [],
+	"interruptions": [],
+	"quests": [
+		{
+			"sid": "new_quest",
+			"hidden": true,
+			"activeOnStart": true,
+			"sharing": "Clone",
+			"subQuests": [
+				{
+					"sid": "1",
+					"activeOnStart": true,
+					"triggers": [
+						{
+							"conditionsLogic": "And",
+							"conditions": [
+								{
+									"c": "StartTurn",
+									"p": [
+										"1",
+										"1"
+									]
+								}
+							],
+							"actions": [
+								{
+									"a": "Dialog",
+									"p": [
+										"dialogOnDayOne"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"_mapName": "EventOnDayOne",
+	"_dialogs": {
+		"dialogOnDayOne": {
+			"id": "dialogOnDayOne",
+			"localization": true,
+			"slides": [
+				{
+					"id": "start",
+					"text": "dialogOnDayOne_text_1",
+					"end": true,
+					"fon": "",
+					"avatars": [
+						{
+							"position": 3,
+							"icon": "icons/hero_large_portraits/hero_dungeon_5_Mouaren_large",
+							"isForeground": "true",
+							"animations": [
+								"appear"
+							]
+						}
+					],
+					"title": {
+						"sid": "mouaren",
+						"position": 3
+					}
+				}
+			]
+		}
+	},
+	"_localization": {
+		"dialogOnDayOne_text_1": "This dialog will appear on day One !",
+		"mouaren": "Mouaren"
+	}
+}

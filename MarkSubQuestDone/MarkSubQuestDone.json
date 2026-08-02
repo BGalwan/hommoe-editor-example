@@ -1,0 +1,95 @@
+{
+	"counters": [
+		{
+			"sid": "counterTroglKilled",
+			"value": 0
+		}
+	],
+	"interruptions": [],
+	"quests": [
+		{
+			"sid": "q1",
+			"activeOnStart": true,
+			"name": "q1_text",
+			"sharing": "Clone",
+			"subQuests": [
+				{
+					"sid": "sq1",
+					"activeOnStart": true,
+					"name": "sq1_text",
+					"triggers": [
+						{
+							"conditionsLogic": "And",
+							"conditions": [
+								{
+									"c": "Counter",
+									"p": [
+										"counterTroglKilled",
+										"=",
+										"1"
+									]
+								}
+							],
+							"actions": [
+								{
+									"a": "CurrentSubQuestDone",
+									"p": []
+								},
+								{
+									"a": "Dialog",
+									"p": [
+										"dialogKilled"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"_mapName": "MarkSubQuestDone",
+	"_dialogs": {
+		"dialogKilled": {
+			"id": "dialogKilled",
+			"localization": true,
+			"slides": [
+				{
+					"id": "start",
+					"text": "dialogKilled_text_1",
+					"end": true,
+					"fon": "",
+					"avatars": [
+						{
+							"position": 1,
+							"icon": "icons/dialogue_unit_portraits/Icon_Troglodyte",
+							"isForeground": "true",
+							"animations": [
+								"appear"
+							]
+						},
+						{
+							"position": 3,
+							"icon": "icons/hero_large_portraits/hero_dungeon_5_Mouaren_large",
+							"isForeground": "false",
+							"animations": [
+								"appear"
+							]
+						}
+					],
+					"title": {
+						"sid": "mouaren",
+						"position": 3
+					}
+				}
+			]
+		}
+	},
+	"_localization": {
+		"dialogKilled_text_1": "Arg ! You have killed me !",
+		"q1_text": "Find the troglodytes",
+		"sq1_text": "Kill the troglodytes",
+		"sq1_desc_text": "Find and kill the troglodytes",
+		"mouaren": "Mouaren"
+	}
+}
